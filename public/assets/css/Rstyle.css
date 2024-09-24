@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: #f0f0f0;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 150px;
+}
+
+.card {
+    width: 500px;
+    margin: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.card-content .btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 16px;
+    color: #fff;
+}
+
+.card-content .btn:hover {
+    background: #cbcb1b;
+}
+
+/* Navbar Styles from Hstyle.css */
+
+.sticky {
+    position: fixed; /* Fixed positioning */
+    top: 0; /* Stick to the top */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it's above other content */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 3); /* Optional shadow for better visibility */
+}
+
+.navbar {
+    width: 100%;
+    margin: 0 auto;
+    padding: 35px 5%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(rgba(45, 45, 45, 0.7), rgba(45, 45, 45, 0.7)), url('/assets/image/BG.png'); 
+}
+
+.logo {
+    width: 80px;
+    cursor: pointer;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li {
+    position: relative;
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff; /* Set text color to black */
+    text-transform: uppercase;
+    padding: 10px 15px;
+    display: block;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #cfcc03; /* Highlight color */
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+/* Dropdown CSS */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #666; /* Set background color for dropdown to a light gray */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    border-radius: 8px;
+}
+
+.dropdown-content a {
+    color: #cfcc03;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #666; /* Border color for dropdown items */
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #cfcc03; /* Hover background color for dropdown items */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Untuk instruksi utama (seperti Prepare the Fish, Prepare the Chips, dll) */
+.content3 > ul > li {
+    font-size: 30px; /* Ukuran font untuk point utama */
+    font-weight: bold; /* Menebalkan teks point utama */
+    margin-bottom: 20px; /* Jarak antara item utama */
+}
+
+/* Untuk langkah-langkah di bawah instruksi utama */
+.content3 > ul > li > ol {
+    margin-left: 20px; /* Jarak antara instruksi utama dan langkah-langkah */
+}
+
+.content3 > ul > li > ol > li {
+    font-size: 16px; /* Ukuran font untuk langkah-langkah */
+    margin-bottom: 10px; /* Jarak antar langkah-langkah */
+}
+
+
+
+

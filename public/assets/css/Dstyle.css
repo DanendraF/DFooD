@@ -1,0 +1,184 @@
+/* Dstyle.css */
+.container {
+    display: flex;
+    align-items: flex-start;
+    padding: 50px;
+    flex-direction: row; /* Layout default: baris */
+    gap: 20px; /* Jarak antara gambar dan konten */
+    margin: 0 auto; /* Center the container horizontally */
+    max-width: 2000px; /* Maksimum lebar container */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.image {
+    flex: 1;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.image img {
+    width: 100%;
+    max-width: 500px; /* Maksimum lebar gambar */
+    height: 500px;
+    border-radius: 5%;
+}
+
+.content1 {
+    flex: 2;
+    margin-left: 20px; /* Jarak kiri antara gambar dan konten */
+    text-align: left;
+}
+
+.judul {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em; /* Ukuran font responsif */
+    margin: 0;
+}
+
+.desc {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8em; /* Ukuran font responsif */
+    text-align: justify;
+    margin-top: 20px;
+    line-height: 1.7;
+}
+
+/* Styling untuk container2 */
+.container2 {
+    display: flex; /* Mengatur layout menjadi flex untuk sejajar horizontal */
+    padding: 20px;
+    margin: 20px auto; /* Center the container2 horizontally */
+    max-width: 1800px; /* Maksimum lebar container2 */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content2, .content3 {
+    flex: 1; /* Agar kedua konten mengambil ruang yang sama */
+    padding: 10px;
+}
+
+.content2 {
+    border-right: 2px solid #ccc; /* Garis pemisah vertikal */
+    margin-right: 20px; /* Jarak kanan untuk ruang antara garis dan konten */
+    font-size: 1.4em;
+}
+
+.content3 {
+    padding-left: 20px; /* Jarak kiri dari garis pemisah */
+    font-size: 1.4em;
+}
+
+ul, ol {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em; /* Ukuran font responsif */
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px; /* Margin responsif */
+}
+
+ol {
+    list-style-type: decimal;
+    margin-left: 20px; /* Margin responsif */
+}
+
+/* Untuk judul utama seperti INGREDIENTS For the Fish, INGREDIENTS For the Chips */
+.content2 > h1, 
+.content2 > h2, 
+.content2 > h3, 
+.content2 > h4 {
+    font-size: 35px; /* Ukuran font untuk judul utama */
+    font-weight: bold; /* Menebalkan teks judul */
+    margin-bottom: 15px; /* Jarak bawah judul */
+    margin-top: 30px; /* Jarak atas judul */
+    border-bottom: 2px solid #ddd; /* Garis bawah untuk menonjolkan judul */
+    padding-bottom: 5px; /* Jarak antara teks dan garis bawah */
+}
+
+/* Untuk item dalam daftar di bawah judul utama */
+.content2 ul {
+    margin-left: 20px; /* Jarak antara judul dan daftar */
+    margin-bottom: 20px; /* Jarak antara daftar */
+}
+
+.content2 ul li {
+    font-size: 20px; /* Ukuran font untuk item daftar */
+    margin-bottom: 10px; /* Jarak antara item dalam daftar */
+}
+
+/* Untuk menjadikan garis pemisah antara bagian lebih jelas */
+.content2 > h1, 
+.content2 > h2, 
+.content2 > h3, 
+.content2 > h4 {
+    border-bottom: 2px solid #ccc; /* Garis pemisah antara bagian */
+}
+
+
+/* Media Queries untuk ukuran layar yang lebih kecil */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Ubah menjadi kolom untuk layar kecil */
+        padding: 10px;
+        margin: 0; /* Menghapus margin untuk tampilan responsif */
+    }
+
+    .image {
+        margin-bottom: 20px; /* Jarak bawah gambar untuk tampilan vertikal */
+    }
+
+    .content1 {
+        margin-left: 0; /* Menghapus margin kiri untuk tampilan vertikal */
+        text-align: center; /* Center the text for smaller screens */
+    }
+
+    .judul {
+        font-size: 1.5em;
+    }
+
+    .desc {
+        font-size: 1em;
+    }
+
+    .container2 {
+        flex-direction: column; /* Ubah menjadi kolom untuk layar kecil */
+        padding: 10px;
+        margin: 10px auto; /* Center container2 horizontally on smaller screens */
+    }
+
+    .content2, .content3 {
+        margin-bottom: 15px;
+        border-right: none; /* Menghapus garis pemisah pada layar kecil */
+    }
+
+    .content3 {
+        padding-left: 0; /* Menghapus padding kiri pada layar kecil */
+    }
+
+    ul, ol {
+        font-size: 1em;
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .judul {
+        font-size: 1.2em;
+    }
+
+    .desc {
+        font-size: 0.9em;
+    }
+
+    ul, ol {
+        font-size: 0.9em;
+        margin-left: 10px;
+    }
+}

@@ -1,0 +1,63 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.sidebar {
+    height: 100vh;
+    background-color: #343a40;
+    color: #fff;
+}
+
+.sidebar .nav-link {
+    color: #fff;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #495057;
+}
+
+.sidebar .nav-link.active {
+    background-color: #007bff;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.table-responsive {
+    margin-top: 20px;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+}
+
+.table .btn {
+    padding: 5px 10px;
+}
+
+.badge {
+    font-size: 0.9rem;
+}
+
+th[data-column] {
+    position: relative;
+    cursor: pointer;
+}
+
+th[data-column]::after {
+    content: "\25B2"; /* Segitiga menghadap ke atas (ascending) */
+    position: absolute;
+    right: 8px;
+    font-size: 12px;
+    color: transparent;
+}
+
+th[data-column].asc::after {
+    color: black; /* Warna segitiga saat ascending */
+}
+
+th[data-column].desc::after {
+    content: "\25BC"; /* Segitiga menghadap ke bawah (descending) */
+    color: black; /* Warna segitiga saat descending */
+}
